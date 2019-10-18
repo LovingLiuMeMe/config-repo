@@ -1,0 +1,31 @@
+# 自定义路由
+zuul:
+  routes:
+    myProduct: # 自定义路由名称 http://localhost:8002/myProduct/product/list
+      path: /myProduct/** # 要路由的地址
+      serviceId: product # 要路由的服务
+      # 默认cookie是无法传递的 sensitiveHeaders（敏感头）设置了cookie,所以无法传递cookie
+      sensitiveHeaders:
+
+    #简洁写法
+    product: /simpleMyProduct/** # http://localhost:8002/simpleMyProduct/product/list
+  # 禁止某些路由(正则表达式)
+  ignored-patterns:
+      - /simpleMyProduct/product/list
+      - /product/product/list
+# 路由可视化（实际上就是开发端口） http://localhost:8002/actuator/routes
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
