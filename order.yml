@@ -28,6 +28,6 @@ spring:
     password: guest
 env: model
 girl:
-  name: lovingliu
+  name: lovingliuliu
   age: 22
   
