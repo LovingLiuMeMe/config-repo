@@ -6,13 +6,11 @@ zuul:
       serviceId: product # 要路由的服务
       # 默认cookie是无法传递的 sensitiveHeaders（敏感头）设置了cookie,所以无法传递cookie
       sensitiveHeaders:
-
     #简洁写法
     product: /simpleMyProduct/** # http://localhost:8002/simpleMyProduct/product/list
   # 禁止某些路由(正则表达式)
   ignored-patterns:
       - /product/product/list
-      - /simpleMyProduct/product/list
 # 路由可视化（实际上就是开发端口） http://localhost:8002/actuator/routes
 management:
   endpoints:
