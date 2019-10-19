@@ -19,4 +19,4 @@ management:
       exposure:
         include: "*"
 error:
-  path: /order/order/gatewayError
+  path: /error 
