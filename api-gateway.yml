@@ -18,3 +18,5 @@ management:
     web:
       exposure:
         include: "*"
+error:
+  path: /gatewayError
