@@ -19,4 +19,4 @@ management:
       exposure:
         include: "*"
 error:
-  path: /api-gateway/gatewayError
+  path: /order/order/gatewayError
