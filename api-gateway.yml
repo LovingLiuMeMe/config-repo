@@ -19,4 +19,4 @@ management:
       exposure:
         include: "*"
 error:
-  path: /gatewayError
+  path: /api-gateway/gatewayError
