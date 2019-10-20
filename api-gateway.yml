@@ -1,5 +1,7 @@
 # 自定义路由（测试）
 zuul:
+  # 排除所有服务的敏感头 
+  sensitive-headers: 
   routes:
     myProduct: # 自定义路由名称 http://localhost:8002/myProduct/product/list
       path: /myProduct/** # 要路由的地址
