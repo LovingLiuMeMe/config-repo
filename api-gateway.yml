@@ -6,6 +6,11 @@ zuul:
       serviceId: product # 要路由的服务
       # 默认cookie是无法传递的 sensitiveHeaders（敏感头）设置了cookie,所以无法传递cookie
       sensitiveHeaders:
+    myOrder: # 自定义路由名称 http://localhost:8002/myProduct/product/list
+      path: /myOrder/** # 要路由的地址
+      serviceId: order # 要路由的服务
+      # 默认cookie是无法传递的 sensitiveHeaders（敏感头）设置了cookie,所以无法传递cookie
+      sensitiveHeaders:
     #简洁写法
     product: /simpleMyProduct/** # http://localhost:8002/simpleMyProduct/product/list
   # 禁止某些路由(正则表达式)
